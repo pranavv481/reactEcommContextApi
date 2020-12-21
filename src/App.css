@@ -1,38 +1,291 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  mainColor:#ffa500;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+nav{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  line-height: 70px;
+  padding: 0px 100px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+.left{
+  width:50%;
+  text-align: left;
+}
+
+.left a{
+  color: #ffa500;
+  font-size: 20px;
+}
+
+.right{
+  width: 50%;
+  text-align: right;
+}
+
+.right a{
+  display: inline-block;
+  color: #222;
+}
+
+.shoppingCart{
+  display: inline-block;
+  font-size: 30px !important;
+}
+
+.cartCount{
+  font-size: 12px;
+  background-color: #ffa500;
+  padding: 3px 5px;
+  border-radius: 50%;
+  margin-left: -11px;
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav ul a{
+  text-decoration: none;
+}
+
+.container{
+  padding: 0 100px;
+}
+
+/* header */
+
+header{
+  background: url("./assets/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+
+.headerText{
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* products */
+
+.products{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product{
+  width: 33%;
+  margin-bottom: 30px;
+  /* text-align: center; */
+  overflow: hidden;
+  padding: 0px 42px;
+  position: relative;
+}
+
+.hot{
+  position: absolute;
+  top: 0;
+  padding: 10px 15px;
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.new{
+  position: absolute;
+  top: 0;
+  padding: 10px 15px;
+  background-color:green;
+  color: #fff;
+}
+
+.productDetails{
+    text-align: center;
+}
+
+.productName{
+   font-size: 20px;
+   font-weight: 500px;
+}
+
+.productPrice{
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+.addToCart{
+  background-color: #ffa500;
+  color: #fff;
+  padding: 10px 10px;
+  text-transform: uppercase;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* cart */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cartContainer{
+  margin-top: 100px;
+  padding: 0 100px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.cartDetails{
+  width: 75%;
+}
+
+.cart{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.cartImage{
+  width: 120px;
+  height: 100px;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cartImage img{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 0 15px;
 }
+
+.cartName{
+  width: 120px;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.cartPrice{
+  width: 80px;
+  display: inline-block;
+  /* padding: 0 15px; */
+}
+
+.incr{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 15px;
+  color: #ffa500;
+  border: 1px solid orange;
+  cursor: pointer;
+}
+
+.cartQty{
+  width: 80px;
+  display: inline-block;
+  /* padding: 0 15px; */
+  
+}
+
+.decr{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 15px;
+  color: #ffa500;
+  border: 1px solid orange;
+  cursor: pointer;
+}
+
+.totalPrice{
+  width: 80px;
+  display: inline-block;
+  /* padding: 0 15px; */
+  
+}
+
+.delete{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 15px;
+  color: #ffa500;
+  border: 1px solid orange;
+  cursor: pointer;
+}
+
+/* summary */
+
+.cartSummary{
+  width: 25%;
+  padding: 0 0 0 20px;
+  /* padding: 13px; */
+}
+
+.summary{
+ 
+}
+
+.summary h3{
+  border-bottom: 1px solid #999999;
+  
+}
+
+.totalItems{
+  display: flex;
+  margin: 15px 0px;
+}
+
+.items{
+  text-align: left;
+  width: 50%;
+}
+
+.quantity{
+  text-align: right;
+  
+}
+
+.totalPriceSection{
+  display: flex;
+  margin: 15px 0px;
+}
+
+.totalPr{
+  width: 50%;
+}
+
+
+
+
+
+
+
+
